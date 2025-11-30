@@ -1,0 +1,10 @@
+
+body { font-family: Arial, sans-serif; background: #f0f7ff; color: #333; }
+.container { max-width: 1000px; margin: auto; padding: 20px; }
+.frame { display: none; }
+.frame.active { display: block; }
+.check-btn { display: flex; align-items: center; padding: 10px; background: #f8f9fa; border: 1px solid #ccc; margin-bottom: 10px; border-radius: 5px; cursor: pointer; }
+.check-btn input { margin-right: 10px; }
+canvas { width: 100%; max-height: 300px; margin-bottom: 20px; }
+.wizard-footer { margin-top: 20px; }
+.wizard-btn { padding: 10px 20px; margin-right: 10px; cursor: pointer; }

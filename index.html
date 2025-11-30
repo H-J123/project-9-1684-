@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Quality Checker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Water Quality Analysis</h1>
+    </div>
+  </header>
+
+  <section class="main-content">
+    <div class="container">
+      <div class="wizard">
+        <div class="wizard-content">
+
+          <!-- Frame 1: Parameter Selection -->
+          <div class="frame active" id="frame1">
+            <h3>Select Parameters</h3>
+            <form id="parameterForm">
+              <div class="parameter-input">
+                <label class="check-btn"><input type="checkbox" name="parameter" value="pH"> pH Level (0-14)</label>
+                <label class="check-btn"><input type="checkbox" name="parameter" value="Hardness"> Hardness (mg/L)</label>
+                <label class="check-btn"><input type="checkbox" name="parameter" value="DissolvedOxygen"> Dissolved Oxygen (mg/L)</label>
+                <label class="check-btn"><input type="checkbox" name="parameter" value="BOD"> Biological Oxygen Demand (mg/L)</label>
+                <label class="check-btn"><input type="checkbox" name="parameter" value="HeavyMetals"> Heavy Metals (μg/L)</label>
+                <label class="check-btn"><input type="checkbox" name="parameter" value="Nitrates"> Nitrates (mg/L)</label>
+                <label class="check-btn"><input type="checkbox" name="parameter" value="Phosphates"> Phosphates (mg/L)</label>
+                <label class="check-btn"><input type="checkbox" name="parameter" value="Turbidity"> Turbidity (NTU)</label>
+                <label class="check-btn"><input type="checkbox" name="parameter" value="Conductivity"> Conductivity (μS/cm)</label>
+              </div>
+            </form>
+          </div>
+
+          <!-- Frame 2: Value Input -->
+          <div class="frame" id="frame2">
+            <h3>Enter Values</h3>
+            <div id="valueInputs"></div>
+          </div>
+
+          <!-- Frame 3: Graphs -->
+          <div class="frame" id="frame3">
+            <h3>Generated Graphs</h3>
+            <canvas id="pieChart"></canvas>
+            <canvas id="barChart"></canvas>
+            <canvas id="scatterChart"></canvas>
+            <canvas id="gaugeChart"></canvas>
+            <canvas id="ribbonChart"></canvas>
+          </div>
+
+          <!-- Frame 4: Classification Result -->
+          <div class="frame" id="frame4">
+            <h3>Water Classification</h3>
+            <div id="classificationResult"></div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="wizard-footer">
+            <button class="wizard-btn btn-back" id="backBtn">Back</button>
+            <button class="wizard-btn btn-next" id="nextBtn">Next</button>
+            <button class="wizard-btn btn-reset" id="resetBtn">Start Over</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
